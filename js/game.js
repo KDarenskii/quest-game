@@ -74,8 +74,8 @@ class Game {
                     </div>
                 </div>
             </div>
-            <a class="next-level-button rating-link" href="/rating.html">Рейтинг игроков</a>
-            <a class="start-link rating-start-link" href="/">Пройти заново</a>
+            <a class="next-level-button rating-link" href="./rating.html">Рейтинг игроков</a>
+            <a class="start-link rating-start-link" href="./index">Пройти заново</a>
             <div></div>
         </div>
         `;

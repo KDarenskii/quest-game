@@ -49,7 +49,7 @@ class SecondLevel {
               <div class="location" data-location="${
                   this.currentLocationsIndex[1]
               }">
-                <img class="location-img" src="/img/levels/second-level/${
+                <img class="location-img" src="./img/levels/second-level/${
                     this.locations[this.currentLocationsIndex[1]].locationSrc
                 }" alt="location" />
               </div>
