@@ -141,6 +141,12 @@ ul {
     position: absolute;
 }
 
+.second-level-animal--mistake {
+    border-radius: 60px;
+    box-shadow: 0 0 20px 1px #ff4b4b;
+    padding: 10px;
+}
+
 .second-level-animal--small {
     width: 120px;
     height: 120px;
@@ -164,7 +170,7 @@ ul {
 
 .first-level-animal--move,
 .second-level-animal--move {
-    animation: move 12s linear infinite;
+    animation: move 4s linear infinite;
 }
 
 .first-level-animal--circle,
@@ -182,7 +188,8 @@ ul {
     animation: jump 1s linear infinite;
 }
 
-.first-level-animal--disappear {
+.first-level-animal--disappear,
+.second-level-animal--disappear {
     animation: disappear 2s ease-in infinite;
 }
 
@@ -206,13 +213,16 @@ ul {
 
 @keyframes move {
     0% {
-        left: 0;
+        transform: translateX(0);
     }
-    50% {
-        left: calc(100% - 100px);
+    25% {
+        transform: translateX(-100px);
+    }
+    75% {
+        transform: translateX(100px);
     }
     100% {
-        left: 0;
+        transform: translateX(0);
     }
 }
 
@@ -279,10 +289,14 @@ ul {
     transform: rotate(-1deg);
 }
 
-.word--disabled {
+.word--correct {
     pointer-events: none;
     background-color: #20e000;
-    align-self: flex-start;
+}
+
+.word--mistake {
+    pointer-events: none;
+    background-color: #ff4949;
 }
 
 .words-container {
@@ -294,7 +308,7 @@ ul {
     position: relative;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    align-items: center;
+    grid-template-rows: repeat(3, 41.6px);
     gap: 10px;
 }
 
